@@ -1,4 +1,5 @@
 using System.Data;
+using backend.Models;
 using backend.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,7 @@ namespace backend.Controllers;
 public class AlimentoController : Controller
 {
   private readonly AlimentoComponentes _alimentoComponentes;
+  private readonly EnergiaService _energiaService;
 
   public AlimentoController(AlimentoComponentes alimentoComponentes)
   {
@@ -29,6 +31,31 @@ public class AlimentoController : Controller
     }
 
     return Ok(resultado);
+  }
+
+  [HttpPost("adicionar")]
+  public async Task<IActionResult> AdicionarEnergiaKJ([FromBody] ComponenteAlimento componente)
+  {
+    if (componente == null)
+    {
+      return BadRequest(new { Message = "Dados do componente não podem ser vazios" });
+    }
+
+    var energia = new EnergiaKJModels
+    {
+      Unidades = componente.Unidades,
+      ValorPor100g = componente.ValorPor100g,
+      ColherSopaCheia45g = componente.ColherSopaCheia45g,
+      CopoAmericanoDuplo200ml = componente.CopoAmericanoDuplo200ml,
+      CopoAmericanoPequeno130ml = componente.CopoAmericanoPequeno130ml,
+      PedacoUnidadeFatia = componente.PedacoUnidadeFatia,
+      PratoFundo450g = componente.PratoFundo450g,
+      PratoRaso350g = componente.PratoRaso350g
+    };
+
+    /* await _energiaService.AdicionarEnergia(energia);
+    return CreatedAtAction(nameof(AdicionarEnergiaKJ), new { codigo = energia.Cogido }, energia); */
+    return Ok(energia);
   }
 
 }

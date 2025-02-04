@@ -13,7 +13,7 @@ namespace backend.Context
         public AlimentoContexto(DbContextOptions<AlimentoContexto> options) : base(options) { }
 
         public DbSet<Alimento> Alimentos { get; set; }
-        public DbSet<EnergiaKJModels> Energia { get; set; }
+        public DbSet<EnergiaKJModels> EnergiaKJ { get; set; }
         public DbSet<EnergiaKcalModels> Energiakcal { get; set; }
         public DbSet<UmidadeModels> Umidade { get; set; }
         public DbSet<CarboidratoTotalModels> CarboidratoTotals { get; set; }
