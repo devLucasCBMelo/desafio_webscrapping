@@ -67,8 +67,6 @@ public class AlimentoController : Controller
       return BadRequest(new { Message = "Dados do componente não podem ser vazios" });
     }
 
-    Console.WriteLine("(((((((((((((((((((((((((11 ---CHEGUEI AQUIIIII)))))))))))))))))))))))))");
-
     var alcool = new AlcoolModels
     {
       Cogido = componente.Cogido,

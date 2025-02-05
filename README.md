@@ -61,3 +61,7 @@ Será um diferencial para esse projeto a implementação de testes unitários e 
 Boa sorte e estamos ansiosos para ver sua solução!
 
 </details>
+
+## Sobre o projeto
+
+Este projeto tem como objetivo fazer um Web Scraping da Composição de Alimentos (Em Medidas caseiras), ou seja, coletar informações de uma página web e preencher um banco de dados com ela.
