@@ -66,6 +66,20 @@ Boa sorte e estamos ansiosos para ver sua solução!
 
 Este projeto tem como objetivo fazer um Web Scraping da Composição de Alimentos (Em Medidas caseiras), ou seja, coletar informações de uma página web e preencher um banco de dados com ela.
 
+## Backend
+
+No backend coloquei alguns endpoints:
+
+![alt text](image-2.png)
+
+O endpoint de Scraping faz uma busca e traz todos os Alimentos listados na primeira página.
+
+Infelizmente os endpoints de adicionar ao banco de dados estão quebrando.
+
+E o endpoint de pegar o Alimento pelo código consegue pegar para o primeiro elemento da tabela BRC0001C
+
+![alt text](image-3.png)
+
 ## banco de dados
 
 A ideia aqui é criar uma tabela que contenha as principais informações do Alimento e criar outras tabelas para os demais componentes.

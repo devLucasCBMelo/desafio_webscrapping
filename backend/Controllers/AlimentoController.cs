@@ -18,9 +18,6 @@ public class AlimentoController : Controller
     _alimentoComponentes = alimentoComponentes ?? throw new ArgumentNullException(nameof(alimentoComponentes));
   }
 
-  [HttpGet]
-  public string Get() => "Hello world";
-
   [HttpGet("componentes/{codigoDoAlimento}")]
   public async Task<IActionResult> ObterComponentes(string codigoDoAlimento)
   {
