@@ -156,11 +156,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.AlcoolModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -447,7 +444,7 @@ namespace backend.Migrations
 
                     b.HasKey("Cogido");
 
-                    b.ToTable("Energia");
+                    b.ToTable("EnergiaKJ");
                 });
 
             modelBuilder.Entity("backend.Models.EnergiaKcalModels", b =>

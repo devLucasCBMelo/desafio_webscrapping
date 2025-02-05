@@ -11,8 +11,8 @@ using backend.Context;
 namespace backend.Migrations
 {
     [DbContext(typeof(AlimentoContexto))]
-    [Migration("20250204160230_Inicial")]
-    partial class Inicial
+    [Migration("20250205005034_RecriandoTabelas")]
+    partial class RecriandoTabelas
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -159,11 +159,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.AlcoolModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -450,7 +447,7 @@ namespace backend.Migrations
 
                     b.HasKey("Cogido");
 
-                    b.ToTable("Energia");
+                    b.ToTable("EnergiaKJ");
                 });
 
             modelBuilder.Entity("backend.Models.EnergiaKcalModels", b =>
