@@ -65,3 +65,9 @@ Boa sorte e estamos ansiosos para ver sua solução!
 ## Sobre o projeto
 
 Este projeto tem como objetivo fazer um Web Scraping da Composição de Alimentos (Em Medidas caseiras), ou seja, coletar informações de uma página web e preencher um banco de dados com ela.
+
+## banco de dados
+
+A ideia aqui é criar uma tabela que contenha as principais informações do Alimento e criar outras tabelas para os demais componentes.
+
+![alt text](image.png)
