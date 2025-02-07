@@ -1,5 +1,9 @@
+import { HeaderContainer } from "./styles"
+
 export const Header = () => {
   return (
-    <h2>Meu Header</h2>
+    <HeaderContainer>
+      <h2>Meu Header</h2>
+    </HeaderContainer>
   )
 }
