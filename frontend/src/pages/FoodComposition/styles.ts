@@ -12,8 +12,21 @@ export const FoodCompositionMain = styled.main`
   flex-direction: column;
   align-items: center;
   flex: 1;
+  margin-bottom: 20px;
 
   input {
     width: 200px;
   }
+`
+
+export const SearchBarContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+`
+
+export const FoodCardList = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 `
