@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Context;
 
@@ -10,9 +11,11 @@ using backend.Context;
 namespace backend.Migrations
 {
     [DbContext(typeof(FoodContext))]
-    partial class FoodContextModelSnapshot : ModelSnapshot
+    [Migration("20250208232412_Inicial")]
+    partial class Inicial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,11 +48,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.AcidosGraxosPoliinsaturadosModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -82,11 +82,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.AcidosGraxosSaturadosModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -119,11 +116,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.AcidosGraxosTransModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -152,6 +146,40 @@ namespace backend.Migrations
                     b.HasKey("Cogido");
 
                     b.ToTable("AcidosGraxosTrans");
+                });
+
+            modelBuilder.Entity("backend.Models.AcucarDeAdicaoModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("AcucarDeAdicao");
                 });
 
             modelBuilder.Entity("backend.Models.AlcoolModels", b =>
@@ -190,11 +218,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.CalcioModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -227,11 +252,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.CarboidradoDisponivelModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -264,11 +286,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.CarboidratoTotalModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -301,11 +320,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.CinzasModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -338,11 +354,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.CobreModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -375,11 +388,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.ColesterolModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -412,11 +422,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.EnergiaKJModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -449,11 +456,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.EnergiaKcalModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -484,13 +488,44 @@ namespace backend.Migrations
                     b.ToTable("Energiakcal");
                 });
 
+            modelBuilder.Entity("backend.Models.EquivalenteDeFolatoModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("EquivalenteDeFolato");
+                });
+
             modelBuilder.Entity("backend.Models.FerroModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -523,11 +558,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.FibraAlimentarModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -560,11 +592,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.FosforoModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -597,11 +626,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.LipidiosModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -634,11 +660,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.MagnesioModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -671,11 +694,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.ManganesModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -706,13 +726,44 @@ namespace backend.Migrations
                     b.ToTable("Manganes");
                 });
 
+            modelBuilder.Entity("backend.Models.NiacinaModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("Niacina");
+                });
+
             modelBuilder.Entity("backend.Models.PotassioModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -745,11 +796,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.ProteinaModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -780,13 +828,78 @@ namespace backend.Migrations
                     b.ToTable("Proteinas");
                 });
 
+            modelBuilder.Entity("backend.Models.RiboflavinaModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("Riboflavina");
+                });
+
+            modelBuilder.Entity("backend.Models.SalDeAdicaoModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("SalDeAdicaoModels");
+                });
+
             modelBuilder.Entity("backend.Models.SelenioModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -819,11 +932,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.SodioModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -854,13 +964,44 @@ namespace backend.Migrations
                     b.ToTable("Sodio");
                 });
 
+            modelBuilder.Entity("backend.Models.TiaminaModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("Tiamina");
+                });
+
             modelBuilder.Entity("backend.Models.UmidadeModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");
@@ -891,13 +1032,214 @@ namespace backend.Migrations
                     b.ToTable("Umidade");
                 });
 
+            modelBuilder.Entity("backend.Models.VitaminaARAEModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("VitaminaARAE");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaAREModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("VitaminaARE");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaB6Models", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("VitaminaB6");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaCModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("VitaminaC");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaDModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("VitaminaD");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaEModelsModels", b =>
+                {
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Cogido");
+
+                    b.ToTable("VitaminaE");
+                });
+
             modelBuilder.Entity("backend.Models.ZincoModels", b =>
                 {
-                    b.Property<int>("Cogido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Cogido"));
+                    b.Property<string>("Cogido")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
                         .HasColumnType("longtext");

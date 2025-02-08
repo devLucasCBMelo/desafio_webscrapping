@@ -9,7 +9,7 @@ namespace backend.Entities
     public abstract class ComponentInfos
     {
         [Key]
-        public int Cogido { get; set; }
+        public string Cogido { get; set; }
         public string Unidades { get; set; }
         public string ValorPor100g { get; set; }
         public string ColherSopaCheia45g { get; set; }
