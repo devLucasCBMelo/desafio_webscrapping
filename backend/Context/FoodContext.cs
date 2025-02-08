@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace backend.Context
 {
-    public class AlimentoContexto : DbContext
+    public class FoodContext : DbContext
     {
-        public AlimentoContexto(DbContextOptions<AlimentoContexto> options) : base(options) { }
+        public FoodContext(DbContextOptions<FoodContext> options) : base(options) { }
 
         public DbSet<Alimento> Alimentos { get; set; }
         public DbSet<EnergiaKJModels> EnergiaKJ { get; set; }

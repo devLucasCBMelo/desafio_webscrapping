@@ -21,11 +21,11 @@ namespace backend.Services
         public string PratoRaso350g { get; set; }
     }
 
-    public class AlimentoComponentes
+    public class FoodComponent
     {
         private readonly HttpClient _httpClient;
 
-        public AlimentoComponentes(HttpClient httpClient)
+        public FoodComponent(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }

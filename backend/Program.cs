@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 // Add services to the container.
-builder.Services.AddDbContext<AlimentoContexto>(options =>
+builder.Services.AddDbContext<FoodContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 39))));  // Corrigido a instância do 'Version'
@@ -25,7 +25,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<ScrapingService>();
-builder.Services.AddHttpClient<AlimentoComponentes>();
+builder.Services.AddHttpClient<FoodComponent>();
 builder.Services.AddHttpClient<EnergiaService>();
 
 var app = builder.Build();

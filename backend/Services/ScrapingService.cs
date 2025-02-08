@@ -8,12 +8,12 @@ using HtmlAgilityPack;
 public class ScrapingService
 {
   private readonly HttpClient _httpClient;
-  private readonly AlimentoContexto _alimentoContexto;
+  private readonly FoodContext _foodContext;
 
-  public ScrapingService(HttpClient httpClient, AlimentoContexto alimentoContexto)
+  public ScrapingService(HttpClient httpClient, FoodContext foodContext)
   {
     _httpClient = httpClient;
-    _alimentoContexto = alimentoContexto;
+    _foodContext = foodContext;
   }
 
   public async Task<string> ObterDadosTBCA()
@@ -51,8 +51,8 @@ public class ScrapingService
       }
     }
 
-    await _alimentoContexto.Alimentos.AddRangeAsync(alimentos);
-    await _alimentoContexto.SaveChangesAsync();
+    await _foodContext.Alimentos.AddRangeAsync(alimentos);
+    await _foodContext.SaveChangesAsync();
 
     return resultado;
   }

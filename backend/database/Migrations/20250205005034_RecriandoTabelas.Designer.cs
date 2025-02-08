@@ -10,7 +10,7 @@ using backend.Context;
 
 namespace backend.Migrations
 {
-    [DbContext(typeof(AlimentoContexto))]
+    [DbContext(typeof(FoodContext))]
     [Migration("20250205005034_RecriandoTabelas")]
     partial class RecriandoTabelas
     {

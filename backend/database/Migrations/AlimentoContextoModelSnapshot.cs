@@ -9,8 +9,8 @@ using backend.Context;
 
 namespace backend.Migrations
 {
-    [DbContext(typeof(AlimentoContexto))]
-    partial class AlimentoContextoModelSnapshot : ModelSnapshot
+    [DbContext(typeof(FoodContext))]
+    partial class FoodContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

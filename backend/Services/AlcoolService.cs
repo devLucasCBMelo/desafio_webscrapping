@@ -9,9 +9,9 @@ namespace backend.Services
 {
     public class AlcoolService
     {
-        private readonly AlimentoContexto _contexto;
+        private readonly FoodContext _contexto;
 
-        public AlcoolService(AlimentoContexto contexto)
+        public AlcoolService(FoodContext contexto)
         {
             _contexto = contexto;
         }
