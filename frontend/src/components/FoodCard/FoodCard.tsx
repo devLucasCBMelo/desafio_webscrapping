@@ -1,7 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import { CardFoodType } from "../../types/FoodTypes";
 import { FoodCardContainer } from "./styles";
 
 const FoodCard = ({ codigo, nome, nomeCientifico, grupo, marca }: CardFoodType) => {
+  const navigate = useNavigate();
+
+  const showFoodComponents = (codigo: string) => {
+    navigate(`/foodcomponents/${codigo}`)
+  }
   return (
     <FoodCardContainer>
       <h4>Código</h4>
@@ -18,6 +24,8 @@ const FoodCard = ({ codigo, nome, nomeCientifico, grupo, marca }: CardFoodType) 
 
       <h4>Marca</h4>
       <p>{marca}</p>
+
+      <button onClick={() => showFoodComponents(codigo)}>Componentes</button>
     </FoodCardContainer>
   )
 }
