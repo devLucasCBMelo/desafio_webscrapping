@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.database.Models;
 using backend.Entities;
 using backend.Models;
 using Microsoft.EntityFrameworkCore;
@@ -38,5 +39,20 @@ namespace backend.Context
         public DbSet<CobreModels> Cobre { get; set; }
         public DbSet<SelenioModels> Selenio { get; set; }
 
+        public DbSet<VitaminaAREModels> VitaminaARE { get; set; }
+        public DbSet<VitaminaARAEModels> VitaminaARAE { get; set; }
+        public DbSet<VitaminaDModels> VitaminaD { get; set; }
+
+        public DbSet<VitaminaEModelsModels> VitaminaE { get; set; }
+        public DbSet<TiaminaModels> Tiamina { get; set; }
+        public DbSet<RiboflavinaModels> Riboflavina { get; set; }
+        public DbSet<NiacinaModels> Niacina { get; set; }
+        public DbSet<VitaminaB6Models> VitaminaB6 { get; set; }
+        public DbSet<VitaminaCModels> VitaminaC { get; set; }
+        public DbSet<EquivalenteDeFolatoModels> EquivalenteDeFolato { get; set; }
+
+        public DbSet<SalDeAdicaoModels> SalDeAdicaoModels { get; set; }
+
+        public DbSet<AcucarDeAdicaoModels> AcucarDeAdicao { get; set; }
     }
 }

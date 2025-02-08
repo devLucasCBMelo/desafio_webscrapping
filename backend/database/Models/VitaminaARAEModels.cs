@@ -6,7 +6,7 @@ using backend.Entities;
 
 namespace backend.database.Models
 {
-    public class VitaminaARAE : ComponentInfos
+    public class VitaminaARAEModels : ComponentInfos
     {
 
     }
