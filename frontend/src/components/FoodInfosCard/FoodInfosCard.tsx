@@ -1,25 +1,18 @@
-import { FoodTypes } from "../../types/FoodTypes"
+import { CardType } from "../../types/FoodTypes"
 import { FoodInfosCardContainer } from "./styles"
 
-export const FoodInfosCard = ({ 
-  codigo,
-  unidades,
-  colherSopaCheia45g,
-  copoAmericanoDuplo200ml,
-  copoAmericanoPequeno130ml,
-  pedacoUnidadeFatia,
-  pratoFundo450g,
-  pratoRaso350g}: FoodTypes) => {
+export const FoodInfosCard = ( {cardName, infos} : CardType) => {
   return (
     <FoodInfosCardContainer>
-      <p>{codigo}</p>
-      <p>{unidades}</p>
-      <p>{colherSopaCheia45g}</p>
-      <p>{copoAmericanoDuplo200ml}</p>
-      <p>{copoAmericanoPequeno130ml}</p>
-      <p>{pedacoUnidadeFatia}</p>
-      <p>{pratoFundo450g}</p>
-      <p>{pratoRaso350g}</p>
+      <h3>{cardName}</h3>
+      <p>{infos.codigo}</p>
+      <p>{infos. unidades}</p>
+      <p>{infos.colherSopaCheia45g}</p>
+      <p>{infos.copoAmericanoDuplo200ml}</p>
+      <p>{infos.copoAmericanoPequeno130ml}</p>
+      <p>{infos.pedacoUnidadeFatia}</p>
+      <p>{infos.pratoFundo450g}</p>
+      <p>{infos.pratoRaso350g}</p>
     </FoodInfosCardContainer>
   )
 }

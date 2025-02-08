@@ -1,15 +1,19 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using backend.Context;
+using backend.Entities;
 using HtmlAgilityPack;
 
 public class ScrapingService
 {
   private readonly HttpClient _httpClient;
+  private readonly AlimentoContexto _alimentoContexto;
 
-  public ScrapingService(HttpClient httpClient)
+  public ScrapingService(HttpClient httpClient, AlimentoContexto alimentoContexto)
   {
     _httpClient = httpClient;
+    _alimentoContexto = alimentoContexto;
   }
 
   public async Task<string> ObterDadosTBCA()
@@ -26,20 +30,29 @@ public class ScrapingService
     var linhas = tabela.SelectNodes(".//tr");
     if (linhas == null) return "Nenhuma linha encontrada na tabela!";
 
+    List<Alimento> alimentos = new List<Alimento>();
     string resultado = "";
     foreach (var linha in linhas)
     {
       var colunas = linha.SelectNodes(".//td");
       if (colunas != null && colunas.Count > 0)
       {
-        string codigo = colunas[0].InnerText.Trim();
-        string nome = colunas[1].InnerText.Trim();
-        string nomeCientifico = colunas[2].InnerText.Trim();
-        string grupo = colunas[3].InnerText.Trim();
-        string marca = colunas[4].InnerText.Trim();
-        resultado += $"Código: {codigo} | Nome: {nome} | Nome Científico: {nomeCientifico} | Grupo: {grupo} | Marca: {marca} \n";
+        var alimento = new Alimento
+        {
+          Codigo = colunas[0].InnerText.Trim(),
+          Nome = colunas[1].InnerText.Trim(),
+          NomeCientifico = colunas[2].InnerText.Trim(),
+          Grupo = colunas[3].InnerText.Trim(),
+          Marca = colunas[4].InnerText.Trim()
+        };
+
+        alimentos.Add(alimento);
+        resultado += $"Código: {alimento.Codigo} | Nome: {alimento.Nome} | Nome Científico: {alimento.NomeCientifico} | Grupo: {alimento.Grupo} | Marca: {alimento.Marca} \n";
       }
     }
+
+    await _alimentoContexto.Alimentos.AddRangeAsync(alimentos);
+    await _alimentoContexto.SaveChangesAsync();
 
     return resultado;
   }
