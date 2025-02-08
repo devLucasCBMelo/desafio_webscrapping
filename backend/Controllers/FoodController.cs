@@ -23,13 +23,25 @@ public class FoodController : Controller
   public async Task<IActionResult> GetAllFoods()
   {
     var alimentos = await _foodContext.Alimentos.ToListAsync();
-    Console.WriteLine(alimentos);
     if (alimentos == null)
     {
       return NotFound();
     }
 
     return Ok(alimentos);
+  }
+
+  [HttpGet("{foodCode}")]
+  public async Task<IActionResult> GetFoodByCode(string foodCode)
+  {
+    var alimento = await _foodContext.Alimentos.FindAsync(foodCode);
+
+    if (alimento == null)
+    {
+      return NotFound();
+    }
+
+    return Ok(alimento);
   }
 
 }
