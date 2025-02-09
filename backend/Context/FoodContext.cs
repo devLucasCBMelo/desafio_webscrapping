@@ -17,7 +17,7 @@ namespace backend.Context
         public DbSet<EnergiaKcalModels> EnergiaKcal { get; set; }
         public DbSet<UmidadeModels> Umidade { get; set; }
         public DbSet<CarboidratoTotalModels> CarboidratoTotal { get; set; }
-        public DbSet<CarboidradoDisponivelModels> CarboidratoDisponivel { get; set; }
+        public DbSet<CarboidratoDisponivelModels> CarboidratoDisponivel { get; set; }
         public DbSet<ProteinaModels> Proteina { get; set; }
         public DbSet<LipidiosModels> Lipidios { get; set; }
         public DbSet<FibraAlimentarModels> FibraAlimentar { get; set; }

@@ -20,7 +20,7 @@ namespace backend.Models
     public class AlcoolModels : ComponentInfos { }
 
     public class CalcioModels : ComponentInfos { }
-    public class CarboidradoDisponivelModels : ComponentInfos { }
+    public class CarboidratoDisponivelModels : ComponentInfos { }
 
     public class CarboidratoTotalModels : ComponentInfos { }
 

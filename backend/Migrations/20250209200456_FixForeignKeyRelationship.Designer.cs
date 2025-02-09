@@ -11,7 +11,7 @@ using backend.Context;
 namespace backend.Migrations
 {
     [DbContext(typeof(FoodContext))]
-    [Migration("20250209172236_FixForeignKeyRelationship")]
+    [Migration("20250209200456_FixForeignKeyRelationship")]
     partial class FixForeignKeyRelationship
     {
         /// <inheritdoc />
@@ -284,7 +284,7 @@ namespace backend.Migrations
                     b.ToTable("Calcio");
                 });
 
-            modelBuilder.Entity("backend.Models.CarboidradoDisponivelModels", b =>
+            modelBuilder.Entity("backend.Models.CarboidratoDisponivelModels", b =>
                 {
                     b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
@@ -1415,7 +1415,7 @@ namespace backend.Migrations
                     b.Navigation("Alimento");
                 });
 
-            modelBuilder.Entity("backend.Models.CarboidradoDisponivelModels", b =>
+            modelBuilder.Entity("backend.Models.CarboidratoDisponivelModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
                         .WithMany()

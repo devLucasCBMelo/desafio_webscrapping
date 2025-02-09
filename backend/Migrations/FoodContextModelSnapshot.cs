@@ -281,7 +281,7 @@ namespace backend.Migrations
                     b.ToTable("Calcio");
                 });
 
-            modelBuilder.Entity("backend.Models.CarboidradoDisponivelModels", b =>
+            modelBuilder.Entity("backend.Models.CarboidratoDisponivelModels", b =>
                 {
                     b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
@@ -1412,7 +1412,7 @@ namespace backend.Migrations
                     b.Navigation("Alimento");
                 });
 
-            modelBuilder.Entity("backend.Models.CarboidradoDisponivelModels", b =>
+            modelBuilder.Entity("backend.Models.CarboidratoDisponivelModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
                         .WithMany()
