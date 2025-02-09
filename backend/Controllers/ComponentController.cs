@@ -18,9 +18,7 @@ namespace backend.Controllers
         private readonly FoodComponent _foodComponent;
         private readonly FoodContext _foodContext;
 
-        private readonly EnergiaService _energiaService;
 
-        private readonly AlcoolService _alcoolService;
 
         public ComponentController(FoodComponent foodComponent, FoodContext foodContext)
         {
@@ -67,7 +65,7 @@ namespace backend.Controllers
             return Ok(energia);
         }
 
-        [HttpPost("AdicionarAlcool")]
+        /* [HttpPost("AdicionarAlcool")]
         public async Task<IActionResult> AdicionarAlcool([FromBody] ComponenteAlimento componente)
         {
             if (componente == null)
@@ -91,6 +89,6 @@ namespace backend.Controllers
             Console.WriteLine(alcool);
             await _alcoolService.AdicionarAlcool(alcool);
             return CreatedAtAction(nameof(AdicionarAlcool), new { codigo = alcool.Cogido }, alcool);
-        }
+        } */
     }
 }

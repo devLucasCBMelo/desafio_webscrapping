@@ -9,7 +9,7 @@ namespace backend.Services
     // Classe para representar as informações de componentes de um alimento
     public class ComponenteAlimento
     {
-        public string Cogido { get; set; }
+        public string Codigo { get; set; }
         public string Unidades { get; set; }
         public string ValorPor100g { get; set; }
 

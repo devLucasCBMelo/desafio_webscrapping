@@ -14,17 +14,18 @@ namespace backend.Context
 
         public DbSet<Alimento> Alimentos { get; set; }
         public DbSet<EnergiaKJModels> EnergiaKJ { get; set; }
-        public DbSet<EnergiaKcalModels> Energiakcal { get; set; }
+        public DbSet<EnergiaKcalModels> EnergiaKcal { get; set; }
         public DbSet<UmidadeModels> Umidade { get; set; }
-        public DbSet<CarboidratoTotalModels> CarboidratoTotals { get; set; }
+        public DbSet<CarboidratoTotalModels> CarboidratoTotal { get; set; }
         public DbSet<CarboidradoDisponivelModels> CarboidratoDisponivel { get; set; }
-        public DbSet<ProteinaModels> Proteinas { get; set; }
+        public DbSet<ProteinaModels> Proteina { get; set; }
         public DbSet<LipidiosModels> Lipidios { get; set; }
         public DbSet<FibraAlimentarModels> FibraAlimentar { get; set; }
         public DbSet<AlcoolModels> Alcool { get; set; }
         public DbSet<CinzasModels> Cinzas { get; set; }
         public DbSet<ColesterolModels> Colesterol { get; set; }
         public DbSet<AcidosGraxosSaturadosModels> AcidosGraxosSaturados { get; set; }
+        public DbSet<AcidosGraxosMonoinsaturadosModels> AcidosGraxosMonoinsaturados { get; set; }
         public DbSet<AcidosGraxosPoliinsaturadosModels> AcidosGraxosPoliinsaturados { get; set; }
         public DbSet<AcidosGraxosTransModels> AcidosGraxosTrans { get; set; }
         public DbSet<CalcioModels> Calcio { get; set; }
@@ -47,10 +48,11 @@ namespace backend.Context
         public DbSet<RiboflavinaModels> Riboflavina { get; set; }
         public DbSet<NiacinaModels> Niacina { get; set; }
         public DbSet<VitaminaB6Models> VitaminaB6 { get; set; }
+        public DbSet<VitaminaB12Models> VitaminaB12 { get; set; }
         public DbSet<VitaminaCModels> VitaminaC { get; set; }
         public DbSet<EquivalenteDeFolatoModels> EquivalenteDeFolato { get; set; }
 
-        public DbSet<SalDeAdicaoModels> SalDeAdicaoModels { get; set; }
+        public DbSet<SalDeAdicaoModels> SalDeAdicao { get; set; }
 
         public DbSet<AcucarDeAdicaoModels> AcucarDeAdicao { get; set; }
     }

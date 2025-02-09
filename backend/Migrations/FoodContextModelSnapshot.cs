@@ -43,9 +43,9 @@ namespace backend.Migrations
                     b.ToTable("Alimentos");
                 });
 
-            modelBuilder.Entity("backend.Models.AcidosGraxosPoliinsaturadosModels", b =>
+            modelBuilder.Entity("backend.Models.AcidosGraxosMonoinsaturadosModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -72,14 +72,48 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
+
+                    b.ToTable("AcidosGraxosMonoinsaturados");
+                });
+
+            modelBuilder.Entity("backend.Models.AcidosGraxosPoliinsaturadosModels", b =>
+                {
+                    b.Property<string>("Codigo")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Codigo");
 
                     b.ToTable("AcidosGraxosPoliinsaturados");
                 });
 
             modelBuilder.Entity("backend.Models.AcidosGraxosSaturadosModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -106,14 +140,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("AcidosGraxosSaturados");
                 });
 
             modelBuilder.Entity("backend.Models.AcidosGraxosTransModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -140,14 +174,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("AcidosGraxosTrans");
                 });
 
             modelBuilder.Entity("backend.Models.AcucarDeAdicaoModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -174,14 +208,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("AcucarDeAdicao");
                 });
 
             modelBuilder.Entity("backend.Models.AlcoolModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -208,14 +242,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Alcool");
                 });
 
             modelBuilder.Entity("backend.Models.CalcioModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -242,14 +276,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Calcio");
                 });
 
             modelBuilder.Entity("backend.Models.CarboidradoDisponivelModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -276,14 +310,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("CarboidratoDisponivel");
                 });
 
             modelBuilder.Entity("backend.Models.CarboidratoTotalModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -310,14 +344,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
-                    b.ToTable("CarboidratoTotals");
+                    b.ToTable("CarboidratoTotal");
                 });
 
             modelBuilder.Entity("backend.Models.CinzasModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -344,14 +378,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Cinzas");
                 });
 
             modelBuilder.Entity("backend.Models.CobreModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -378,14 +412,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Cobre");
                 });
 
             modelBuilder.Entity("backend.Models.ColesterolModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -412,14 +446,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Colesterol");
                 });
 
             modelBuilder.Entity("backend.Models.EnergiaKJModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -446,14 +480,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("EnergiaKJ");
                 });
 
             modelBuilder.Entity("backend.Models.EnergiaKcalModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -480,14 +514,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
-                    b.ToTable("Energiakcal");
+                    b.ToTable("EnergiaKcal");
                 });
 
             modelBuilder.Entity("backend.Models.EquivalenteDeFolatoModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -514,14 +548,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("EquivalenteDeFolato");
                 });
 
             modelBuilder.Entity("backend.Models.FerroModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -548,14 +582,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Ferro");
                 });
 
             modelBuilder.Entity("backend.Models.FibraAlimentarModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -582,14 +616,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("FibraAlimentar");
                 });
 
             modelBuilder.Entity("backend.Models.FosforoModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -616,14 +650,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Fosforo");
                 });
 
             modelBuilder.Entity("backend.Models.LipidiosModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -650,14 +684,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Lipidios");
                 });
 
             modelBuilder.Entity("backend.Models.MagnesioModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -684,14 +718,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Magnesio");
                 });
 
             modelBuilder.Entity("backend.Models.ManganesModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -718,14 +752,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Manganes");
                 });
 
             modelBuilder.Entity("backend.Models.NiacinaModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -752,14 +786,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Niacina");
                 });
 
             modelBuilder.Entity("backend.Models.PotassioModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -786,14 +820,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Potassio");
                 });
 
             modelBuilder.Entity("backend.Models.ProteinaModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -820,14 +854,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
-                    b.ToTable("Proteinas");
+                    b.ToTable("Proteina");
                 });
 
             modelBuilder.Entity("backend.Models.RiboflavinaModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -854,14 +888,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Riboflavina");
                 });
 
             modelBuilder.Entity("backend.Models.SalDeAdicaoModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -888,14 +922,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
-                    b.ToTable("SalDeAdicaoModels");
+                    b.ToTable("SalDeAdicao");
                 });
 
             modelBuilder.Entity("backend.Models.SelenioModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -922,14 +956,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Selenio");
                 });
 
             modelBuilder.Entity("backend.Models.SodioModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -956,14 +990,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Sodio");
                 });
 
             modelBuilder.Entity("backend.Models.TiaminaModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -990,14 +1024,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Tiamina");
                 });
 
             modelBuilder.Entity("backend.Models.UmidadeModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -1024,14 +1058,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Umidade");
                 });
 
             modelBuilder.Entity("backend.Models.VitaminaARAEModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -1058,14 +1092,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("VitaminaARAE");
                 });
 
             modelBuilder.Entity("backend.Models.VitaminaAREModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -1092,14 +1126,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("VitaminaARE");
                 });
 
-            modelBuilder.Entity("backend.Models.VitaminaB6Models", b =>
+            modelBuilder.Entity("backend.Models.VitaminaB12Models", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -1126,14 +1160,48 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
+
+                    b.ToTable("VitaminaB12");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaB6Models", b =>
+                {
+                    b.Property<string>("Codigo")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ColherSopaCheia45g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoDuplo200ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CopoAmericanoPequeno130ml")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PedacoUnidadeFatia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoFundo450g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PratoRaso350g")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Unidades")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ValorPor100g")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Codigo");
 
                     b.ToTable("VitaminaB6");
                 });
 
             modelBuilder.Entity("backend.Models.VitaminaCModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -1160,14 +1228,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("VitaminaC");
                 });
 
             modelBuilder.Entity("backend.Models.VitaminaDModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -1194,14 +1262,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("VitaminaD");
                 });
 
             modelBuilder.Entity("backend.Models.VitaminaEModelsModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -1228,14 +1296,14 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("VitaminaE");
                 });
 
             modelBuilder.Entity("backend.Models.ZincoModels", b =>
                 {
-                    b.Property<string>("Cogido")
+                    b.Property<string>("Codigo")
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("ColherSopaCheia45g")
@@ -1262,9 +1330,427 @@ namespace backend.Migrations
                     b.Property<string>("ValorPor100g")
                         .HasColumnType("longtext");
 
-                    b.HasKey("Cogido");
+                    b.HasKey("Codigo");
 
                     b.ToTable("Zinco");
+                });
+
+            modelBuilder.Entity("backend.Models.AcidosGraxosMonoinsaturadosModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.AcidosGraxosPoliinsaturadosModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.AcidosGraxosSaturadosModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.AcidosGraxosTransModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.AcucarDeAdicaoModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.AlcoolModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.CalcioModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.CarboidradoDisponivelModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.CarboidratoTotalModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.CinzasModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.CobreModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.ColesterolModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.EnergiaKJModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.EnergiaKcalModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.EquivalenteDeFolatoModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.FerroModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.FibraAlimentarModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.FosforoModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.LipidiosModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.MagnesioModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.ManganesModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.NiacinaModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.PotassioModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.ProteinaModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.RiboflavinaModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.SalDeAdicaoModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.SelenioModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.SodioModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.TiaminaModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.UmidadeModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaARAEModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaAREModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaB12Models", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaB6Models", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaCModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaDModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.VitaminaEModelsModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Models.ZincoModels", b =>
+                {
+                    b.HasOne("backend.Entities.Alimento", "Alimento")
+                        .WithMany()
+                        .HasForeignKey("Codigo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alimento");
                 });
 #pragma warning restore 612, 618
         }

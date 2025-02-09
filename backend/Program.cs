@@ -26,7 +26,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<ScrapingService>();
 builder.Services.AddHttpClient<FoodComponent>();
-builder.Services.AddHttpClient<EnergiaService>();
 
 var app = builder.Build();
 

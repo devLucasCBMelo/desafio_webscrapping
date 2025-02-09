@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Models;
 
 namespace backend.Entities
 {
@@ -16,5 +18,7 @@ namespace backend.Entities
         public string Grupo { get; set; }
 
         public string Marca { get; set; }
+        /* public Collection<EnergiaKJModels> EnergiaKJs { get; set; } */
     }
+
 }

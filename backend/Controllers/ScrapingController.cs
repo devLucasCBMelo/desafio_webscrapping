@@ -18,4 +18,11 @@ public class ScrapingController : ControllerBase
     var resultado = await _scrapingService.ObterDadosTBCA();
     return Ok(resultado);
   }
+
+  [HttpGet()]
+  public async Task<IActionResult> ObterComponentesDosAlimentos()
+  {
+    var resultado = await _scrapingService.GetComponentsFood();
+    return Ok(resultado);
+  }
 }
