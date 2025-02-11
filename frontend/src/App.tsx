@@ -10,7 +10,7 @@ function App() {
     <Routes>
       <Route path='/' element={ <Login /> } />
       <Route path='/foodcomposition'  element={ <FoodComposition /> }/>
-      <Route path='/foodcomponents' element={ <ComponentInfosPage /> } />
+      <Route path='/foodcomponents/:foodCode' element={ <ComponentInfosPage /> } />
     </Routes>
   )
 }

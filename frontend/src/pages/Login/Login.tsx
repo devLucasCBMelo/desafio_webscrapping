@@ -22,7 +22,7 @@ function Login() {
           </label>
           <label htmlFor="input-password">
             Senha
-            <input id="input-password" type="password" placeholder="Digte sua senha"/>
+            <input id="input-password" type="password" placeholder="Digite sua senha"/>
           </label>
           <button type="submit">Entrar</button>
         </LoginForm>

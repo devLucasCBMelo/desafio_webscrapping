@@ -1,8 +1,10 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using backend.Context;
 using backend.Helpers;
 using HtmlAgilityPack;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Services
 {
@@ -24,13 +26,30 @@ namespace backend.Services
     public class FoodComponent
     {
         private readonly HttpClient _httpClient;
+        private readonly FoodContext _foodContext;
 
-        public FoodComponent(HttpClient httpClient)
+        public FoodComponent(HttpClient httpClient, FoodContext foodContext)
         {
             _httpClient = httpClient;
+            _foodContext = foodContext;
         }
 
-        public async Task<ComponenteAlimento> ObterDadosComponentes(string codigoDoAlimento)
+        public async Task<object> ObterDadosComponentes(string foodCode)
+        {
+            var componentes = await _foodContext.Alimentos
+                .Include(a => a.energiaKcalModels)
+                .Include(a => a.calcios)
+                .Include(a => a.acidosGraxosMonoinsaturadosModels)
+                .Include(a => a.acidosGraxosPoliinsaturadosModels)
+                .Include(a => a.acidosGraxosSaturadosModels)
+                .Include(a => a.acidosGraxosTransModels)
+                .FirstOrDefaultAsync(a => a.Codigo == foodCode);
+            return componentes;
+        }
+
+    }
+
+    /* public async Task<ComponenteAlimento> ObterDadosComponentes(string codigoDoAlimento)
         {
             string url = $"https://www.tbca.net.br/base-dados/int_composicao_alimentos.php?cod_produto={codigoDoAlimento}";
             var response = await _httpClient.GetStringAsync(url);
@@ -78,5 +97,5 @@ namespace backend.Services
                 PratoRaso350g = pratoRaso350g,
             };
         }
-    }
+    } */
 }
