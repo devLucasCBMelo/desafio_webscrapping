@@ -1,7 +1,7 @@
-import { CardType } from "../../types/FoodTypes"
+import { CardInfosType } from "../../types/FoodTypes"
 import { FoodInfosCardContainer } from "./styles"
 
-export const FoodInfosCard = ( {cardName, infos} : CardType) => {
+export const FoodInfosCard = ( {cardName, infos} : CardInfosType) => {
   return (
     <FoodInfosCardContainer>
       <h3>{cardName}</h3>

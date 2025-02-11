@@ -86,9 +86,9 @@ public class ScrapingService
         {
           Codigo = colunas[0].InnerText.Trim(),
           Nome = colunas[1].InnerText.Trim(),
-          NomeCientifico = colunas[2].InnerText.Trim(),
-          Grupo = colunas[3].InnerText.Trim(),
-          Marca = colunas[4].InnerText.Trim()
+          NomeCientifico = string.IsNullOrWhiteSpace(colunas[2].InnerText) ? "--" : colunas[2].InnerText.Trim(),
+          Grupo = string.IsNullOrWhiteSpace(colunas[3].InnerText) ? "--" : colunas[3].InnerText.Trim(),
+          Marca = string.IsNullOrWhiteSpace(colunas[4].InnerText) ? "--" : colunas[4].InnerText.Trim()
         };
 
         alimentos.Add(alimento);

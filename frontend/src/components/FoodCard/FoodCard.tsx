@@ -25,7 +25,9 @@ const FoodCard = ({ codigo, nome, nomeCientifico, grupo, marca }: CardFoodType) 
       <h4>Marca</h4>
       <p>{marca}</p>
 
-      <button onClick={() => showFoodComponents(codigo)}>Componentes</button>
+      <div>
+        <button onClick={() => showFoodComponents(codigo)}>Componentes</button>
+      </div>
     </FoodCardContainer>
   )
 }

@@ -11,8 +11,8 @@ using backend.Context;
 namespace backend.Migrations
 {
     [DbContext(typeof(FoodContext))]
-    [Migration("20250209200456_FixForeignKeyRelationship")]
-    partial class FixForeignKeyRelationship
+    [Migration("20250211013953_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

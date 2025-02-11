@@ -1,24 +1,46 @@
 import styled from "styled-components";
 
 export const FoodCardContainer = styled.div`
-  background-color: gray;
-  border-radius: 10px;
-  padding: 5px;
-  color: white;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  width: 300px;
-  margin: 5px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 250px;
+  min-height: 350px;
+  padding: 15px;
+  background: #DAC8B3;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
   h4 {
-    margin-top: 10px;
-    margin-bottom: 0;
-    margin-left: 3px;
+    margin: 5px 0;
   }
 
   p {
-    margin: 0;
-    margin-left: 3px;
-    
+    margin: 2px 0 10px;
   }
-`
+
+  div {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+`;
