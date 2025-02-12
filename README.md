@@ -153,7 +153,7 @@ Já caso o usuário digite especificamente o código completo, retornará apenas
 
 No backend coloquei alguns endpoints:
 
-![alt text](image-11.png)
+![alt text](image-12.png)
 
 1. Scraping
 
