@@ -34,14 +34,16 @@ public class FoodController : Controller
   [HttpGet("{foodCode}")]
   public async Task<IActionResult> GetFoodByCode(string foodCode)
   {
-    var alimento = await _foodContext.Alimentos.FindAsync(foodCode);
+    var alimentos = await _foodContext.Alimentos
+      .Where(x => x.Codigo.StartsWith(foodCode))
+      .ToListAsync();
 
-    if (alimento == null)
+    if (alimentos == null)
     {
       return NotFound();
     }
 
-    return Ok(alimento);
+    return Ok(alimentos);
   }
 
 }

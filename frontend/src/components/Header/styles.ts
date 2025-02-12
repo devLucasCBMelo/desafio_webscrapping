@@ -9,4 +9,14 @@ export const HeaderContainer = styled.header`
   width: 100%;
   height: 250px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 3px;
+  }
 `

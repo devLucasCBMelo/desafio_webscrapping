@@ -54,3 +54,21 @@ export const FoodCardList = styled.div`
   flex-wrap: wrap;
   max-width: 1000px;
 `
+
+export const LoadMoreCardsButton = styled.button`
+  margin-top: 20px;
+  margin-left: 2px;
+  background-color: #ee8003;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #ee2f03;
+  }
+`
