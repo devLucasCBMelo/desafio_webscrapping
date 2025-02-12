@@ -46,6 +46,20 @@ export const SearchBarContainer = styled.div`
       background-color: #0056b3;
     }
   }
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      height: 30px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  }
 `
 
 export const FoodCardList = styled.div`
