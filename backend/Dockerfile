@@ -1,15 +1,26 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:35792ea4ad1db051981f62b313f1be3b46b1f45cadbaa3c288cd0d3056eefb83 AS build
-WORKDIR /App
+# Usar a imagem do .NET SDK como base para compilar
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
 
-# Copy everything
-COPY . ./
-# Restore as distinct layers
+# Copiar o conteúdo do diretório backend
+COPY ./backend /src
+
+# Restaurar as dependências
 RUN dotnet restore
-# Build and publish a release
-RUN dotnet publish -o out
 
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0@sha256:6c4df091e4e531bb93bdbfe7e7f0998e7ced344f54426b7e874116a3dc3233ff
-WORKDIR /App
-COPY --from=build /App/out .
-ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
+# Compilar e publicar a aplicação para produção
+RUN dotnet publish -c Release -o /app/out
+
+# Usar a imagem do ASP.NET para execução
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+
+# Copiar os arquivos publicados do estágio anterior
+COPY --from=build /app/out .
+
+# Expor a porta onde a aplicação vai rodar
+EXPOSE 5000
+
+# Definir o comando de entrada para rodar o aplicativo
+ENTRYPOINT ["dotnet", "backend.dll"]
+

@@ -66,6 +66,41 @@ Boa sorte e estamos ansiosos para ver sua solução!
 
 Este projeto tem como objetivo fazer um Web Scraping da Composição de Alimentos (Em Medidas caseiras), ou seja, coletar informações de uma página web e preencher um banco de dados com ela.
 
+## Como rodar a aplicação
+
+1. Primeiro clone o repositório na sua máquina e entre nele.
+
+```
+git clone git@github.com:devLucasCBMelo/desafio_webscrapping.git
+cd desafio_webscrapping
+```
+
+2. Agora vamos entrar no nosso back-end e rodar a noss API
+
+```
+cd backend
+dotnet restore
+dotnet watch run
+```
+
+3. Abra um novo terminal e vamos entrar no frontend
+
+```
+cd frontend
+```
+
+instale as dependências
+
+```
+npm install
+```
+
+Rode a aplicação
+
+```
+npm run dev
+```
+
 ## Sobre a aplicação:
 
 A aplicação conta com 3 telas:
@@ -120,16 +155,23 @@ No backend coloquei alguns endpoints:
 
 ![alt text](image-11.png)
 
-O endpoint de Scraping faz uma busca e traz todos os Alimentos listados na primeira página.
+1. Scraping
 
-Infelizmente os endpoints de adicionar ao banco de dados estão quebrando.
+   Aqui temos duas funções get que populam o nosso banco de dados.
 
-E o endpoint de pegar o Alimento pelo código consegue pegar para o primeiro elemento da tabela BRC0001C
+   - **/api/scraping/tba** traz a lista com todos os alimento e os joga na tabela Alimentos no banco de dados
 
-![alt text](image-3.png)
+   - **/api/scraping** traz todos os componentes de acordo com os alimentos presentes na tabela
+
+2. Food
+
+   Aqui temos duas funções que buscam nossos alimentos no banco de dados
+
+   - **/Food** traz todos os alimentos presentes na tabela Alimentos;
+   - **/Food/{foodCode}** Busca um alimento pelo código dele ou traz uma lista se o código for incompleto
 
 ## banco de dados
 
-A ideia aqui é criar uma tabela que contenha as principais informações do Alimento e criar outras tabelas para os demais componentes.
+O banco de dados está em MySQL e é composto por 39 tabelas. Sendo uma delas a tabela de Alimentos e as outras 38 são as tabelas dos componentes dos alimentos (Ácidos graxos, álcool, ferro, proteínas, vitaminas ....) que se relacionam pelo código do alimento, que é a nossa chave primária na tabela Alimentos e chave estrangeira para as de componentes.
 
 ![alt text](image.png)

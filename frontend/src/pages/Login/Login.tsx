@@ -2,9 +2,25 @@ import { useNavigate } from "react-router-dom";
 import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
 import { LoginContainer, LoginForm, LoginMain } from "./styles";
+import { useEffect } from "react";
+import { fetchFoodDatabase } from "../../utils/fetchFoodDatabase";
+import { fetchComponentsDatabase } from "../../utils/fetchComponentsDatabase";
 
 function Login() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const callFoods = async () => {
+      await fetchFoodDatabase();
+    }
+
+    const callComponents = async () => {
+      await fetchComponentsDatabase();
+    }
+
+    callFoods();
+    callComponents();
+  }, [])
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
