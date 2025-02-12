@@ -77,6 +77,8 @@ cd desafio_webscrapping
 
 2. Certifique-se de ter o docker instalado no seu computador.
 
+Assegure-se de que as portas: 3306, 8080 e 3080 já não estão sendo utilizadas por outra aplicação na sua máquina.
+
 E rode o comando
 
 ```
