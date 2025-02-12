@@ -12,6 +12,12 @@ export const LoginMain = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 18px;
+    }
+  }
 `
 
 export const LoginForm = styled.form`
@@ -52,6 +58,23 @@ export const LoginForm = styled.form`
 
     &:hover {
       background-color: #0056b3;
+    }
+  }
+
+  @media (max-width: 500px) {
+    width: 350px;
+    min-height: 200px;
+
+    label {
+      font-size: 15px;
+
+      input {
+        min-width: 180px;
+      }
+    }
+
+    button {
+      margin-top: 20px;
     }
   }
 `

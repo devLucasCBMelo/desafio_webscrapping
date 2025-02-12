@@ -19,4 +19,10 @@ export const HeaderContainer = styled.header`
     font-size: 40px;
     margin: 3px;
   }
+
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 30px;
+    }
+  }
 `

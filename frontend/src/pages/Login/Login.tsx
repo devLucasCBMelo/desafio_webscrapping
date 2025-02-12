@@ -14,7 +14,7 @@ function Login() {
     <LoginContainer>
       <Header />
       <LoginMain>
-        <h1>Composição de Alimentos (em medidas caseiras)</h1>
+        <h1>Faça seu login abaixo</h1>
         <LoginForm onSubmit={(event) => handleSubmit(event)}>
           <label htmlFor="input-email">
             E-mail
