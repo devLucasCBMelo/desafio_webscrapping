@@ -75,30 +75,12 @@ git clone git@github.com:devLucasCBMelo/desafio_webscrapping.git
 cd desafio_webscrapping
 ```
 
-2. Agora vamos entrar no nosso back-end e rodar a noss API
+2. Certifique-se de ter o docker instalado no seu computador.
+
+E rode o comando
 
 ```
-cd backend
-dotnet restore
-dotnet watch run
-```
-
-3. Abra um novo terminal e vamos entrar no frontend
-
-```
-cd frontend
-```
-
-instale as dependências
-
-```
-npm install
-```
-
-Rode a aplicação
-
-```
-npm run dev
+docker-compose up --build
 ```
 
 ## Sobre a aplicação:
