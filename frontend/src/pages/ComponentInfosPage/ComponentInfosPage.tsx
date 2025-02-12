@@ -28,8 +28,11 @@ function ComponentInfosPage() {
   return (
     <ComponentInfosPageContainer>
       <Header />
-      <h1>Código do alimento: {foodCode}</h1>
-      <button onClick={() => returnToFoods()}>voltar</button>
+      <div>
+        <h2>Código do alimento: {foodCode}</h2>
+        <p>Descrição: {componentList?.nome}</p>
+        <button onClick={() => returnToFoods()}>voltar para os alimentos</button>
+      </div>
       {componentList && (
         <Table>
           <thead>

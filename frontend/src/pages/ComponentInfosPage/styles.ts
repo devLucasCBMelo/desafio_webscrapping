@@ -5,20 +5,43 @@ export const ComponentInfosPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  button {
-    margin-left: 2px;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 30px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
 
-    &:hover {
-      background-color: #0056b3;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px 5px;
+    }
+
+   button {
+      margin-top: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    div {
+      h2 {
+        font-size: 20px;
+      }
     }
   }
 `
@@ -43,6 +66,10 @@ export const Table = styled.table`
     &:nth-child(even) {
       background-color: #DAC8B3
     }
+  }
+
+  @media (max-width: 500px) {
+    width: 97%;
   }
 `
 
