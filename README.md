@@ -77,16 +77,20 @@ A aplicação conta com 3 telas:
 Veja abaixo cada uma delas:
 
 1. A tela de Login
+   <br><br>
    ![alt text](image-4.png)
 
 Aqui, teoricamente, o usuário conseguiria colocar os seus dados de cadastro e após a validação ele faria o login.
 
 Obs: Por enquanto você pode colocar qualquer valor nos campos e-mail e de senha, essa parte não foi desenvolvida pois não era o foco aqui.
 
+---
+
 2. A tela de alimentos
+   <br><br>
    ![alt text](image-5.png)
 
-Na tela de alimentos, o usuário consegue ver todos os alimentos registrados no banco de dados, porém limitado a apenas 15 cards por tela. Caso o usuário deseje ver ver mais cards ele pode simplesmente clicar no botão "carregar mais" que se encontra no final da página, veja a imagem abaixo:
+Na tela de alimentos, o usuário consegue ver todos os alimentos registrados no banco de dados, porém limitado a apenas 15 cards por tela. Caso o usuário deseje ver mais cards ele pode simplesmente clicar no botão "carregar mais" que se encontra no final da página, veja a imagem abaixo:
 
 ![alt text](image-8.png)
 
@@ -94,18 +98,27 @@ Ainda na tela de alimentos, o usuário tem a opção de procurar um alimento pel
 
 ![alt text](image-9.png)
 
-Já caso o usuário digite especificamente o código completo, retornará apenas o card desejado:
+Já caso o usuário digite especificamente o código completo, retornará apenas o card desejado, veja o exemplo abaixo ao passar o código "BRC0004K":
 
 ![alt text](image-10.png)
 
+---
+
 3. A tela de componentes do alimento
+   <br><br>
    ![alt text](image-7.png)
+
+   Na tela de alimentos, se o usuário clicar em "Componentes" em algum dos cards, ele será levado até a tela de componentes daquele alimento em específico.
+
+   Aqui o usuário consegue ver uma tabela contendo todos os 37 componentes listados.
+
+   Obs: Ao todo na verdade são 38 componentes, por algum motivo, ou erro no Entity Framework, ele não está trazendo o primeiro elemento da tabela.
 
 ## Backend
 
 No backend coloquei alguns endpoints:
 
-![alt text](image-2.png)
+![alt text](image-11.png)
 
 O endpoint de Scraping faz uma busca e traz todos os Alimentos listados na primeira página.
 
