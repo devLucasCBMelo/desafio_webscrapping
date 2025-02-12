@@ -66,6 +66,41 @@ Boa sorte e estamos ansiosos para ver sua solução!
 
 Este projeto tem como objetivo fazer um Web Scraping da Composição de Alimentos (Em Medidas caseiras), ou seja, coletar informações de uma página web e preencher um banco de dados com ela.
 
+## Sobre a aplicação:
+
+A aplicação conta com 3 telas:
+
+- a tela de login
+- a tela de alimentos
+- a tela de componentes do alimento
+
+Veja abaixo cada uma delas:
+
+1. A tela de Login
+   ![alt text](image-4.png)
+
+Aqui, teoricamente, o usuário conseguiria colocar os seus dados de cadastro e após a validação ele faria o login.
+
+Obs: Por enquanto você pode colocar qualquer valor nos campos e-mail e de senha, essa parte não foi desenvolvida pois não era o foco aqui.
+
+2. A tela de alimentos
+   ![alt text](image-5.png)
+
+Na tela de alimentos, o usuário consegue ver todos os alimentos registrados no banco de dados, porém limitado a apenas 15 cards por tela. Caso o usuário deseje ver ver mais cards ele pode simplesmente clicar no botão "carregar mais" que se encontra no final da página, veja a imagem abaixo:
+
+![alt text](image-8.png)
+
+Ainda na tela de alimentos, o usuário tem a opção de procurar um alimento pelo código dele. Caso o usuário digite apenas um pedaço do código, a aplicação retornará todos os alimentos que começam com aquela parte do código. Por exemplo, ao digitar o código "BRC0002", aparecerá na tela todos os alimentos que começam com esse código:
+
+![alt text](image-9.png)
+
+Já caso o usuário digite especificamente o código completo, retornará apenas o card desejado:
+
+![alt text](image-10.png)
+
+3. A tela de componentes do alimento
+   ![alt text](image-7.png)
+
 ## Backend
 
 No backend coloquei alguns endpoints:

@@ -18,11 +18,11 @@ function Login() {
         <LoginForm onSubmit={(event) => handleSubmit(event)}>
           <label htmlFor="input-email">
             E-mail
-            <input id="input-email" type="email"  placeholder="Digite seu e-mail"/>
+            <input id="input-email" type="email"  placeholder="Digite seu e-mail" required/>
           </label>
           <label htmlFor="input-password">
             Senha
-            <input id="input-password" type="password" placeholder="Digite sua senha"/>
+            <input id="input-password" type="password" placeholder="Digite sua senha" required/>
           </label>
           <button type="submit">Entrar</button>
         </LoginForm>
