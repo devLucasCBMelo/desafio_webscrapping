@@ -6,7 +6,7 @@ export const FoodInfosCard = ( {cardName, infos} : CardInfosType) => {
     <FoodInfosCardContainer>
       <h3>{cardName}</h3>
       <p>{infos.codigo}</p>
-      <p>{infos. unidades}</p>
+      <p>{infos.unidades}</p>
       <p>{infos.colherSopaCheia45g}</p>
       <p>{infos.copoAmericanoDuplo200ml}</p>
       <p>{infos.copoAmericanoPequeno130ml}</p>

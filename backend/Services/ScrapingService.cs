@@ -207,7 +207,7 @@ public class ScrapingService
             Console.WriteLine("Álcool adicionado.");
           }
           // Alfa-tocoferol (Vitamina E)
-          else if (colunas[0].InnerText.Trim() == "Vitamina E")
+          else if (colunas[0].InnerText.Trim() == "Alfa-tocoferol (Vitamina E)")
           {
             var vitaminaE = new VitaminaEModelsModels
             {

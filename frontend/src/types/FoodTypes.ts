@@ -11,7 +11,7 @@ export interface ComponentTypes {
 }
 
 export interface CardInfosType {
-  cardName: 'EnergiaKJ' | 'Energiakcal' | 'Umidade' | 'Carboidrato Total' | 'Carboidrato Disponível' | 'Proteína' | 'Lipídios' | 'Fibra Alimentar' | 'Álcool' | 'Cinzas' | 'Colesterol' | 'Ácidos Graxos Saturados' | 'Ácidos Graxos Monoinsaturados' | 'Ácidos Graxos Poliinsaturados' ,
+  cardName: 'acidosGraxosPoliinsaturados' | 'acidosGraxosMonoinsaturados' | 'acidosGraxosSaturados' | 'acucarDeAdicao' | 'alcool' | 'calcios' | 'carboidratoDisponivel' | 'carboidratoTotal' | 'cinzas' | 'cobre' | 'colesterol' | 'energiaKcal' | 'energiaKJs' | 'equivalenteDeFolato' | 'ferro' | 'fibraAlimentar' | 'fosforo' | 'lipidios' | 'magnesio' | 'manganes' | 'niacina' | 'potassio' | 'proteina' | 'riboflavina' | 'salDeAdicao' | 'selenio' | 'sodio' | 'tiamina' |  'umidade' | 'vitaminaARAE' | 'vitaminaARE' | 'vitaminaB12' | 'vitaminaB6' | 'vitaminaC' | 'vitaminaD' | 'vitaminaE' | 'zinco',
   infos: ComponentTypes
 }
 
@@ -21,4 +21,50 @@ export interface CardFoodType {
   nomeCientifico: string,
   grupo: string,
   marca: string,
+}
+
+export interface FoodWithComponentTypes {
+  codigo: string,
+  nome: string,
+  nomeCientifico: string,
+  grupo: string,
+  marca: string
+  acidosGraxosPoliinsaturados: ComponentTypes[],
+  acidosGraxosMonoinsaturados: ComponentTypes[],
+  acidosGraxosSaturados: ComponentTypes[],
+  acidosGraxosTrans: ComponentTypes[],
+  acucarDeAdicao: ComponentTypes[],
+  alcool: ComponentTypes[],
+  calcios: ComponentTypes[],
+  carboidratoDisponivel: ComponentTypes[],
+  carboidratoTotal: ComponentTypes[],
+  cinzas: ComponentTypes[],
+  cobre: ComponentTypes[],
+  colesterol: ComponentTypes[],
+  energiaKcal: ComponentTypes[],
+  energiaKJs: ComponentTypes[],
+  equivalenteDeFolato: ComponentTypes[],
+  ferro: ComponentTypes[],
+  fibraAlimentar: ComponentTypes[],
+  fosforo: ComponentTypes[],
+  lipidios: ComponentTypes[],
+  magnesio: ComponentTypes[],
+  manganes: ComponentTypes[],
+  niacina: ComponentTypes[],
+  potassio: ComponentTypes[],
+  proteina: ComponentTypes[],
+  riboflavina: ComponentTypes[],
+  salDeAdicao: ComponentTypes[],
+  selenio: ComponentTypes[],
+  sodio: ComponentTypes[],
+  tiamina: ComponentTypes[],
+  umidade: ComponentTypes[],
+  vitaminaARAE: ComponentTypes[],
+  vitaminaARE: ComponentTypes[],
+  vitaminaB12: ComponentTypes[],
+  vitaminaB6: ComponentTypes[],
+  vitaminaC: ComponentTypes[],
+  vitaminaD: ComponentTypes[],
+  vitaminaE: ComponentTypes[],
+  zinco: ComponentTypes[],
 }

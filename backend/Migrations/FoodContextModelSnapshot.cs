@@ -1338,7 +1338,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.AcidosGraxosMonoinsaturadosModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("acidosGraxosMonoinsaturadosModels")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1349,7 +1349,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.AcidosGraxosPoliinsaturadosModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("acidosGraxosPoliinsaturadosModels")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1360,7 +1360,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.AcidosGraxosSaturadosModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("acidosGraxosSaturadosModels")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1371,7 +1371,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.AcidosGraxosTransModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("acidosGraxosTransModels")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1382,7 +1382,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.AcucarDeAdicaoModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("acucarDeAdicao")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1393,7 +1393,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.AlcoolModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("alcool")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1404,7 +1404,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.CalcioModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("calcios")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1415,7 +1415,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.CarboidratoDisponivelModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("carboidratoDisponivel")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1426,7 +1426,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.CarboidratoTotalModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("carboidratoTotal")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1437,7 +1437,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.CinzasModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("cinzas")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1448,7 +1448,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.CobreModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("cobre")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1459,7 +1459,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.ColesterolModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("colesterol")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1470,7 +1470,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.EnergiaKJModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("energiaKJs")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1481,7 +1481,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.EnergiaKcalModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("energiaKcal")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1492,7 +1492,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.EquivalenteDeFolatoModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("equivalenteDeFolato")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1503,7 +1503,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.FerroModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("ferro")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1514,7 +1514,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.FibraAlimentarModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("fibraAlimentar")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1525,7 +1525,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.FosforoModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("fosforo")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1536,7 +1536,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.LipidiosModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("lipidios")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1547,7 +1547,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.MagnesioModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("magnesio")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1558,7 +1558,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.ManganesModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("manganes")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1569,7 +1569,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.NiacinaModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("niacina")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1580,7 +1580,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.PotassioModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("potassio")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1591,7 +1591,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.ProteinaModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("proteina")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1602,7 +1602,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.RiboflavinaModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("riboflavina")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1613,7 +1613,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.SalDeAdicaoModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("salDeAdicao")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1624,7 +1624,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.SelenioModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("selenio")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1635,7 +1635,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.SodioModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("sodio")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1646,7 +1646,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.TiaminaModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("tiamina")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1657,7 +1657,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.UmidadeModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("umidade")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1668,7 +1668,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.VitaminaARAEModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("vitaminaARAE")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1679,7 +1679,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.VitaminaAREModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("vitaminaARE")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1690,7 +1690,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.VitaminaB12Models", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("vitaminaB12")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1701,7 +1701,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.VitaminaB6Models", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("vitaminaB6")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1712,7 +1712,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.VitaminaCModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("vitaminaC")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1723,7 +1723,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.VitaminaDModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("vitaminaD")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1734,7 +1734,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.VitaminaEModelsModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("vitaminaE")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1745,12 +1745,91 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.ZincoModels", b =>
                 {
                     b.HasOne("backend.Entities.Alimento", "Alimento")
-                        .WithMany()
+                        .WithMany("zinco")
                         .HasForeignKey("Codigo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Alimento");
+                });
+
+            modelBuilder.Entity("backend.Entities.Alimento", b =>
+                {
+                    b.Navigation("acidosGraxosMonoinsaturadosModels");
+
+                    b.Navigation("acidosGraxosPoliinsaturadosModels");
+
+                    b.Navigation("acidosGraxosSaturadosModels");
+
+                    b.Navigation("acidosGraxosTransModels");
+
+                    b.Navigation("acucarDeAdicao");
+
+                    b.Navigation("alcool");
+
+                    b.Navigation("calcios");
+
+                    b.Navigation("carboidratoDisponivel");
+
+                    b.Navigation("carboidratoTotal");
+
+                    b.Navigation("cinzas");
+
+                    b.Navigation("cobre");
+
+                    b.Navigation("colesterol");
+
+                    b.Navigation("energiaKJs");
+
+                    b.Navigation("energiaKcal");
+
+                    b.Navigation("equivalenteDeFolato");
+
+                    b.Navigation("ferro");
+
+                    b.Navigation("fibraAlimentar");
+
+                    b.Navigation("fosforo");
+
+                    b.Navigation("lipidios");
+
+                    b.Navigation("magnesio");
+
+                    b.Navigation("manganes");
+
+                    b.Navigation("niacina");
+
+                    b.Navigation("potassio");
+
+                    b.Navigation("proteina");
+
+                    b.Navigation("riboflavina");
+
+                    b.Navigation("salDeAdicao");
+
+                    b.Navigation("selenio");
+
+                    b.Navigation("sodio");
+
+                    b.Navigation("tiamina");
+
+                    b.Navigation("umidade");
+
+                    b.Navigation("vitaminaARAE");
+
+                    b.Navigation("vitaminaARE");
+
+                    b.Navigation("vitaminaB12");
+
+                    b.Navigation("vitaminaB6");
+
+                    b.Navigation("vitaminaC");
+
+                    b.Navigation("vitaminaD");
+
+                    b.Navigation("vitaminaE");
+
+                    b.Navigation("zinco");
                 });
 #pragma warning restore 612, 618
         }
