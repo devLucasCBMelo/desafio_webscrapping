@@ -4,6 +4,23 @@ export const ComponentInfosPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  button {
+    margin-left: 2px;
+    margin-bottom: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
 `
 
 export const Table = styled.table`
@@ -24,7 +41,14 @@ export const Table = styled.table`
 
   tr {
     &:nth-child(even) {
-      background-color: #f9f9f9
+      background-color: #DAC8B3
     }
   }
+`
+
+export const TitleTD = styled.td`
+  border: 1px solid black;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 18px;
 `

@@ -1,5 +1,5 @@
-import { useParams } from "react-router-dom";
-import { ComponentInfosPageContainer, Table } from "./styles";
+import { useNavigate, useParams } from "react-router-dom";
+import { ComponentInfosPageContainer, Table, TitleTD } from "./styles";
 import { useEffect, useState } from "react";
 import { fetchComponentyCode } from "../../utils/fetchComponentByCode";
 import { FoodWithComponentTypes } from "../../types/FoodTypes";
@@ -19,18 +19,25 @@ function ComponentInfosPage() {
     getComponents();
   }, [foodCode]);
 
+  const navigate = useNavigate();
+
+  const returnToFoods = () => {
+    navigate('/foodcomposition')
+  }
+
   return (
     <ComponentInfosPageContainer>
       <Header />
       <h1>Código do alimento: {foodCode}</h1>
+      <button onClick={() => returnToFoods()}>voltar</button>
       {componentList && (
         <Table>
           <thead>
             <tr>
-              <td>Componente</td>
-              <td>Unidade</td>
-              <td>Valor por 100g</td>
-              <td>Colher de sopa cheia 45g</td>
+              <TitleTD>Componente</TitleTD>
+              <TitleTD>Unidade</TitleTD>
+              <TitleTD>Valor por 100g</TitleTD>
+              <TitleTD>Colher de sopa cheia 45g</TitleTD>
             </tr>
           </thead>
           <tbody>
